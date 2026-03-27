@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package cot;
+
+// Message 1: Server sends Point A to Client
+message PointA {
+  bytes x = 1; // 32 bytes
+  bytes y = 2; // 32 bytes
+}
+
+// Message 2: Client sends Point B to Server
+message PointB {
+  bytes x = 1; // 32 bytes
+  bytes y = 2; // 32 bytes
+}
+
+// Message 3: Server sends encrypted payloads to Client
+message EncryptedPayloads {
+  bytes e0 = 1; // Encrypted m0
+  bytes e1 = 2; // Encrypted m1
+}
